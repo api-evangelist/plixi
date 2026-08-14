@@ -12,16 +12,22 @@ description: >-
   SaaS product and does not publish a public developer API; it was surfaced as a
   portfolio company of Canaan Partners and added to the API Evangelist network.
 accessModel:
-  pricing: unknown
-  onboarding: unknown
+  pricing: paid
+  onboarding: self-serve
   trial: false
   try_now: false
   public: false
-  label: Unknown
-  confidence: low
-  source: []
-  generated: '2026-07-22'
-  method: derived
+  label: Paid · Self-serve signup
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-08-13'
+  method: searched
+  note: >-
+    Retail subscription pricing is published at https://plixi.com/pricing and
+    signup is self-serve; there is no free trial (Pro/Experts carry a 7-day
+    growth-or-refund guarantee instead). public:false because Plixi exposes no
+    developer API at all — this describes product access, not API access.
 image: https://cdn.plixi.com/images/plixi-logo-new.png
 url: https://raw.githubusercontent.com/api-evangelist/plixi/refs/heads/main/apis.yml
 x-type: company
@@ -32,12 +38,32 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-08-13'
 x-enrichment:
-  date: '2026-07-20'
+  date: '2026-08-13'
   status: minimal
-  artifacts_added: 1
+  artifacts_added: 4
   pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Plixi is a consumer Instagram-growth subscription with no developer surface
+    at all — /api, /developers, /docs and /openapi.json return 404, no
+    api./docs./developer. subdomain resolves, and the only /.well-known/ 200s
+    are the marketing site's HTML single-page-app shell rather than documents.
+  evidence:
+  - url: https://plixi.com/developers
+    status: 404
+  - url: https://plixi.com/openapi.json
+    status: 404
+  - url: https://plixi.com/graphql
+    status: 404
+  - url: https://plixi.com/.well-known/agent-card.json
+    status: 200
+  - url: https://help.plixi.com/
+    status: 530
+  checked: '2026-08-13'
 tags:
 - Company
 - Social Media
@@ -67,6 +93,10 @@ common:
   url: https://plixi.com/privacy
 - type: DomainSecurity
   url: security/plixi-domain-security.yml
+- type: Plans
+  url: plans/plixi-plans-pricing.yml
+- type: LLMsTxt
+  url: llms/plixi-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
