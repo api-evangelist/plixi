@@ -1,0 +1,23 @@
+generated: '2026-08-13'
+method: searched
+source: https://plixi.com/
+note: >-
+  Plixi publishes no developer API, so there is no rate-limit surface to record.
+  Contract discovery on 2026-08-13 found no OpenAPI, GraphQL, MCP or webhook
+  endpoint on any Plixi host, and no developer/docs page exists (/api,
+  /developers, /docs all return 404; no api./docs./developer. subdomain
+  resolves). The published subscription plans meter follower growth per month,
+  not API calls. This is an honest zero, not an unmeasured gap — and no
+  RateLimits pointer is wired into apis.yml, because there is no runtime limit
+  signal for an agent to read.
+limit_count: 0
+limits: []
+headers: []
+exhaustion_status: null
+x-evidence:
+- url: https://plixi.com/developers
+  status: 404
+- url: https://plixi.com/api
+  status: 404
+- url: https://plixi.com/docs
+  status: 404

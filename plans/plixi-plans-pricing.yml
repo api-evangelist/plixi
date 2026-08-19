@@ -1,0 +1,65 @@
+generated: '2026-08-13'
+method: searched
+source: https://plixi.com/pricing
+note: >-
+  Plixi publishes retail subscription pricing for its Instagram growth service.
+  These are consumer/SMB product plans, not API plans — Plixi ships no public
+  developer API, so no plan carries API quotas, keys or rate limits. Prices were
+  read verbatim from the public pricing page on 2026-08-13; an "anniversary
+  flash sale" discount banner was displayed at fetch time and is not recorded as
+  a tier.
+currency: USD
+billing_periods:
+- monthly
+- yearly
+plan_count: 3
+plans:
+- name: Basic
+  price_monthly: 59
+  price_monthly_billed_yearly: 49
+  currency: USD
+  billing: monthly or yearly
+  included: '1,000 - 1,500 followers per month'
+  features:
+  - Targeted organic followers
+  - Instant results from day one
+  - LA & London team support
+  - Real-time analytics
+  guarantee: null
+- name: Pro
+  price_monthly: 83
+  price_monthly_billed_yearly: 69
+  currency: USD
+  billing: monthly or yearly
+  included: '2,500 - 3,500+ followers per month'
+  features:
+  - Everything in Basic
+  - AI-powered growth engine
+  - Competitor targeting
+  - Plixi Cloud access
+  - PDF export
+  guarantee: Guaranteed growth within 7 days or refund
+- name: Experts
+  price_monthly: 120
+  price_monthly_billed_yearly: 99
+  currency: USD
+  billing: monthly or yearly
+  included: '3,500 - 5,000+ followers per month'
+  features:
+  - Everything in Pro
+  - Dedicated Instagram manager
+  - Extra AI optimization
+  - Human account monitoring
+  - Weekly reports
+  guarantee: Guaranteed growth within 7 days or refund
+add_ons:
+- name: Plixi Experts
+  price_monthly: 300
+  currency: USD
+  note: '+$300/mo with any plan'
+free_trial: false
+api_plans: false
+x-evidence:
+  fetched: '2026-08-13'
+  url: https://plixi.com/pricing
+  http_status: 200

@@ -1,0 +1,64 @@
+generated: '2026-08-13'
+method: probed
+source: live GET probes of https://plixi.com/.well-known/*
+host: https://plixi.com
+note: >-
+  Every /.well-known/ path returned HTTP 200, but each response body is the
+  Plixi single-page-app HTML shell (<!DOCTYPE html><html lang=en>), not a
+  document. The plixi.com router answers 200 with the SPA for any unmatched
+  /.well-known/* path while returning a real 404 for unmatched top-level paths
+  (/openapi.json, /api, /developers all 404). These are therefore MISSES, not
+  hits. No WellKnown, SecurityTxt or APICatalog pointer is emitted in apis.yml,
+  because the provider does not actually serve any of these documents.
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  document: false
+  body: html-spa-shell
+  file: null
+- path: /.well-known/openid-configuration
+  status: 200
+  document: false
+  body: html-spa-shell
+  file: null
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  document: false
+  body: html-spa-shell
+  file: null
+- path: /.well-known/api-catalog
+  status: 200
+  document: false
+  body: html-spa-shell
+  file: null
+- path: /.well-known/ai-plugin.json
+  status: 200
+  document: false
+  body: html-spa-shell
+  file: null
+- path: /.well-known/agent-card.json
+  status: 200
+  document: false
+  body: html-spa-shell
+  file: null
+- path: /.well-known/agent.json
+  status: 200
+  document: false
+  body: html-spa-shell
+  file: null
+other_hosts_probed:
+- host: help.plixi.com
+  status: 530
+  note: Cloudflare error 1016 — dangling DNS record, no origin.
+- host: api.plixi.com
+  status: null
+  note: does not resolve (NXDOMAIN)
+- host: docs.plixi.com
+  status: null
+  note: does not resolve (NXDOMAIN)
+- host: developer.plixi.com
+  status: null
+  note: does not resolve (NXDOMAIN)
+summary:
+  documents_served: 0
+  html_shell_200s: 7

@@ -1,0 +1,46 @@
+# Plixi
+
+> Plixi is an AI-powered Instagram growth platform for influencers, businesses, e-commerce brands and content creators. It grows accounts through paid advertising, micro-interactions and niche audience-data clustering, with a machine-learning targeting feature (AI-Match) users train by rating accounts. Plixi is a consumer/SMB SaaS product: as of 2026-08-13 it publishes **no public developer API**, no OpenAPI/GraphQL/MCP contract, and no developer portal.
+
+<!--
+generated: 2026-08-13
+method: generated
+source: apis.yml + repo artifacts (no /llms.txt is served at https://plixi.com/llms.txt — HTTP 404)
+-->
+
+## Product
+
+- [Plixi](https://plixi.com): Instagram growth service homepage.
+- [Instagram Growth](https://plixi.com/instagram-bot): the core organic growth engine.
+- [Instagram Analytics](https://plixi.com/instagram-analytics): real-time analytics dashboard.
+- [Instagram Account Manager](https://plixi.com/instagram-account-manager): Plixi Experts managed service.
+- [Free tools](https://plixi.com/tools): engagement calculator and Instagram downloader utilities.
+
+## Commercial
+
+- [Pricing](https://plixi.com/pricing): Basic $59/mo, Pro $83/mo, Experts $120/mo (lower billed yearly); Plixi Experts add-on +$300/mo.
+- [Sign in](https://plixi.com/login)
+- [Affiliate program](https://plixi.com/affiliate)
+- [Terms of Service](https://plixi.com/terms)
+- [Privacy Policy](https://plixi.com/privacy)
+- [Contact / support](https://plixi.com/contact)
+- [Ethical commitment](https://plixi.com/ethical-commitment)
+
+## Resources
+
+- [Resources and blog](https://plixi.com/resources/)
+
+## Developer surface
+
+- **No API.** There is no published REST, GraphQL, gRPC, MCP or webhook contract. `/api`, `/developers`, `/docs`, `/openapi.json` and `/swagger.json` all return 404; `api.plixi.com`, `docs.plixi.com` and `developer.plixi.com` do not resolve.
+- **No `/.well-known/` documents.** Those paths return HTTP 200 but serve the site's HTML single-page-app shell, not a document. See `well-known/plixi-well-known.yml`.
+- **No first-party SDKs or packages** on npm, PyPI, RubyGems or crates.io; the `plixi` GitHub organization has zero public repositories.
+- Integrations with Hootsuite, Buffer, Zapier, MailChimp, HubSpot, Shopify and others are advertised on the marketing site, but no connection mechanism, API key, OAuth flow or documentation is published for them.
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/plixi/refs/heads/main/apis.yml): the APIs.json profile for Plixi.
+- `plans/plixi-plans-pricing.yml`: published subscription tiers.
+- `rate-limits/plixi-rate-limits.yml`: recorded absence of any API rate-limit surface.
+- `security/plixi-domain-security.yml`: probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture.
+- `well-known/plixi-well-known.yml`: `/.well-known/` probe record.
