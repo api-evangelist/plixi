@@ -96,6 +96,8 @@ tags_raw:
 - Social-Media
 apis: []
 common:
+- type: RateLimits
+  url: rate-limits/plixi-rate-limits.yml
 - url: https://plixi.com/resources/feed
   type: BlogRSS
 - type: Website
